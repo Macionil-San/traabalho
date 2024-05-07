@@ -1,0 +1,80 @@
+.modal{
+    position: fixed; /*Posiciona na frente dos elementos*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    opacity: 0; /*Transparência do elemento (quando em 0 totalmente transparente)*/
+    z-index: -1;/*Camada inferior ao body. Tratabalha com número inteiros*/
+}
+
+.modal.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+}
+
+.modalHeader{
+    display: flex;
+    position: relative;
+    justify-content: center;/*alinhamento dos itens*/
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+}
+
+.modalClose{
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    user-select: none;
+    right: 0;
+    transition: .4s; /*Tempo que leva para preencher a cor por completo enquanto o mouse estiver sobrevoando*/
+}
+
+.modalClose:hover{
+    background-color: #ff4949;
+    color: white;
+}
+
+.modalForm{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px; /*Aqui foi aplicado nos eixos em x e y. Sendo um na horizontal e outro na vertical. Aqui ele trabalhará com os eixos em inline*/
+}
+
+.modalField{
+    width: calc(50% -10px);
+    height: 30px;
+    outline-style: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.modalField:focus{
+    border-bottom: 1px solid var(--primary-color);
+} /*Aqui foi aplicado a pseudo classe focus quando o campo para digitar estiver em focus*/
+
+.modalFooter{
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}

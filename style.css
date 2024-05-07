@@ -1,0 +1,55 @@
+*{
+    /* Reset da página*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Abaixo temos as variáveis fixas da página (ao invés de inserirmos os mesmo comando definos uma variável fixa para os elementos que serã repetidos na página) */
+:root {
+    --primary-color: #ffba00;
+    --secundary-color: #fff1cc;
+    --shadow-color: #ccc;
+    --text-color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    height: 70px; /*Altura do meu Header*/
+    text-align: center;
+    box-shadow: 0 1px 2px var(--shadow-color);
+    line-height: 70px; /*Alinhado altura da linha com o tamanho do Header*/
+}
+
+.header-title{
+    color: black;
+    font-size: 2rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    width: 90%;
+    margin: 5vh auto;
+    padding: 50px;
+    box-shadow: 4px 4px 20px var(--shadow-color);
+    gap:20px;
+}
+
+footer{
+    width: 100;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 20px;
+}

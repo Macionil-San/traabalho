@@ -1,0 +1,28 @@
+.records{
+    width: 100%;
+    text-align: left;
+    user-select: none;
+}
+
+.records th{
+    height: 50px;
+    background-color: var(--primary-color);
+    padding-left: 20px;
+    font: 1.2rem;
+}
+
+.records td{
+    height: 50px;
+    padding-left: 20px;
+}
+
+/* É possível pegar determinados elementos com pseudo classes */
+.records td:last-child, .records th:last-child {
+padding: 0;
+text-align: center;
+min-width: 140px;
+}
+
+.records tr:hover{
+    background-color: var(--secundary-color);
+}

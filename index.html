@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="records.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>CRUD User Interface</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">
+            Cadastro de usuários
+        </h1>
+    </header>
+
+    <main>
+        <button type="button" class="button blue" id="userRegistration">
+            Cadastro Usuário
+        </button>
+
+        <table class="records sortable">
+            <thead> 
+                <tr> 
+                    <th>Nome</th> 
+                    <th>E-mail</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"> 
+              
+        </table>
+
+        <section class="modal" id="modal">
+            <section class="modalContent">
+                <header class="modalHeader">
+
+                    <h2 id="tituloModal">Novo Usuário</h2>
+
+                    <span class="modalClose" id="modalClose">&#10006</span> 
+                </header>
+                <form class="modalForm"> 
+                    <input type="text" class="modalField" placeholder="Nome" id="name">
+                    <input type="text" class="modalField" placeholder="E-mail" id="email">
+                    <input type="text" class="modalField" placeholder="Celular" id="cel">
+                    <input type="text" class="modalField" placeholder="Cidade" id="city">                    
+                </form>
+                <footer class="modalFooter"> 
+                    <button class="button green" id="saveValues">Salvar</button>
+                    <button class="button red">Cancelar</button>
+                </footer>
+            </section>
+        </section>
+    </main>
+
+   
+</body>
+</html>
